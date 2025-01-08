@@ -24,7 +24,7 @@ const FormPage = () => {
           </div>
       <div className="form-logo">
         <h1>
-          FAC<span style={{ color: "#14a476" }}>IO</span>
+          FAC<span style={{ color: "#007BFF" }}>IO</span>
         </h1>
       </div>
         <input type="text" placeholder="Shop Name" className="form-input" />
