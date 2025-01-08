@@ -54,15 +54,15 @@
     border-bottom: 1px solid #ddd ;
   }
   .phone{
-    border-bottom: 1px solid #14a476 ;
+    border-bottom: 1px solid #007BFF ;
 
   }
   .form-input:focus {
-    border: 1px solid #14a476;
+    border: 1px solid #007BFF;
   }
   
   .form-button {
-    background-color: #14a476;
+    background-color: #007BFF;
     color: white;
     font-size: 1rem;
     padding: 10px;
@@ -76,7 +76,7 @@
   }
   
   .form-button:hover {
-    background-color: #044430;
+    background-color: #0c5db3;
   }
 
 

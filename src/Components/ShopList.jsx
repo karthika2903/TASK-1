@@ -1,20 +1,28 @@
 import React, { useState } from 'react';
-import Img1 from '../assets/img1-removebg-preview.png';
-import Img3 from '../assets/img3-removebg-preview.png';
-import Img4 from '../assets/img4-removebg-preview.png';
-import Img5 from '../assets/img5-removebg-preview.png';
-import Img6 from '../assets/img6-removebg-preview.png';
-import Img7 from '../assets/img7-removebg-preview.png';
+import Img1 from '../assets/pic2.jpg';
+import Img3 from '../assets/pic3.jpg';
+import Img4 from '../assets/pic4.jpg';
+import Img2 from '../assets/pic5.png';
+import Img6 from '../assets/pic6.jpg';
+import Img7 from '../assets/pic1.jpg';
+import Img8 from '../assets/pic7.jpg';
+import Img9 from '../assets/pic10.jpg';
+import Img10 from '../assets/pic9.jpg';
+
 
 
 const ShopList = () => {
   const [shops, setShops] = useState([
-    { id: 1, name: "Cosmetics", count: 50, price: 100, checked: false, image: Img1 },
-    { id: 3, name: "Footwear", count: 50, price: 100, checked: false, image: Img3},
-    { id: 4, name: "Grocery", count: 50, price: 100, checked: false, image:Img4 },
-    { id: 5, name: "Sport", count: 50, price: 100, checked: false, image: Img5},
-    { id: 6, name: "Furniture", count: 50, price: 100, checked: false, image:Img6 },
-    { id: 7, name: "Car Accessories", count: 50, price: 100, checked: false, image: Img7 },
+    { id: 1, name: "100 PLUS CAN", count: 50, price: "24*320ML", checked: false, image: Img1 },
+    { id: 2, name: "100 PLUS", count: 50, price: "24*500ML", checked: false, image: Img3},
+    { id: 3, name: "100 PLUS", count: 50, price: "12*1.5L", checked: false, image:Img4 },
+    { id: 4, name: "COCA COLA", count: 50, price: "12*1.5L", checked: false, image: Img2},
+    { id: 5, name: "COCO COLA CAN", count: 50, price: "24*320ML", checked: false, image:Img6 },
+    { id: 6, name: "DASANI DRINKING WATER", count: 50, price: "24*600ML", checked: false, image: Img7 },
+    { id: 7, name: "DASANI DRINKING WATER", count: 50, price: "12*1.5L", checked: false, image: Img8 },
+    { id: 8, name: "DUTCH LADY CHOCOLATE", count: 50, price: "24*200ML", checked: false, image: Img9 },
+    { id: 9, name: "DUTCH LADY CHOCOLATE", count: 50, price: "12*1L", checked: false, image: Img10 },
+
   ]);
 
   const handleCheckboxClick = (id) => {
@@ -57,7 +65,7 @@ const ShopList = () => {
               {shop.count} Shop available
             </p>
             <p style={{ margin: 0, fontWeight: "bold", fontSize: "1rem" }}>
-              RM {shop.price}
+              Size {shop.price}
             </p>
           </div>
           <div
