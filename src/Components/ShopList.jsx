@@ -1,5 +1,6 @@
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; 
 import Img1 from "../assets/pic2.jpg";
 import Img2 from "../assets/pic3.jpg";
 import Img3 from "../assets/pic4.jpg";
@@ -23,6 +24,8 @@ const ShopList = () => {
     { id: 9, name: "DUTCH LADY CHOCOLATE", count: "12*1L", price: 100, checked: false, image: Img9 },
   ]);
 
+  const navigate = useNavigate(); 
+
   const handleCheckboxClick = (id) => {
     setShops((prevShops) =>
       prevShops.map((shop) =>
@@ -31,8 +34,12 @@ const ShopList = () => {
     );
   };
 
+  const handleSubmit = () => {
+    navigate("/success"); 
+  };
+
   return (
-    <div style={{ padding: "10px", boxSizing: "border-box",  backgroundColor:"#ddd"}}>
+    <div style={{ padding: "10px", boxSizing: "border-box", backgroundColor: "#ddd" }}>
       {shops.map((shop) => (
         <div
           key={shop.id}
@@ -42,9 +49,9 @@ const ShopList = () => {
             justifyContent: "space-between",
             marginBottom: "15px",
             padding: "10px",
-            backgroundColor:"#fff",
-            borderRadius:"8px",
-            fontFamily:"Poppins"
+            backgroundColor: "#fff",
+            borderRadius: "8px",
+            fontFamily: "Poppins",
           }}
         >
           <div
@@ -71,13 +78,18 @@ const ShopList = () => {
             style={{
               flex: 1,
               paddingLeft: "15px",
+              whiteSpace: "nowrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis", 
             }}
           >
             <h4
               style={{
                 margin: 0,
-                // fontSize: "medium",
                 fontWeight: "bold",
+                textOverflow: "ellipsis", 
+                whiteSpace: "nowrap", 
+                overflow: "hidden", 
               }}
             >
               {shop.name}
@@ -86,6 +98,7 @@ const ShopList = () => {
               style={{
                 margin: "5px 0",
                 fontSize: "small",
+                color:"gray"
               }}
             >
               Size: {shop.count}
@@ -95,31 +108,31 @@ const ShopList = () => {
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-end",
+              justifyContent: "flex-end",
+              alignItems: "center",
             }}
           >
             <p
               style={{
                 margin: 0,
                 fontWeight: "bold",
-                fontSize: "small",
+                fontSize: "1rem",
+                marginRight: "10px",
               }}
             >
-              RM {shop.price}
+              RM 100
             </p>
             <div
               onClick={() => handleCheckboxClick(shop.id)}
               style={{
-                marginTop: "10px",
                 width: "25px",
                 height: "25px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 cursor: "pointer",
-                borderRadius:"4px",
                 backgroundColor: shop.checked ? "#0800ff" : "#E0E0E0",
+                borderRadius: "4px"
               }}
             >
               {shop.checked && (
@@ -129,7 +142,9 @@ const ShopList = () => {
           </div>
         </div>
       ))}
-         <button
+      <button
+      className="button-submit"
+        onClick={handleSubmit} 
         style={{
           marginTop: "20px",
           padding: "10px 20px",
@@ -139,11 +154,11 @@ const ShopList = () => {
           borderRadius: "5px",
           cursor: "pointer",
           width: "100%",
+          fontFamily:"Poppins"
         }}
       >
         Submit
-   </button>
-      
+      </button>
     </div>
   );
 };

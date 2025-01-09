@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import FormPage from './Components/FormPage';
 import ShopListPage from './Components/ShopList';
-import './index.css'; 
+import SuccessPage from './Components/SuccessPage';
 
 const App = () => {
   return (
@@ -10,6 +10,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<FormPage />} />
         <Route path="/shop-list" element={<ShopListPage />} />
+        <Route path="/success" element={<SuccessPage />} />
       </Routes>
     </Router>
   );
