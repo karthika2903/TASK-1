@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
 .shop-list-container {
   padding: 10px;
   box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .shop-item {
@@ -13,6 +17,7 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #fff;
+
 }
 
 .shop-item img {
@@ -28,12 +33,14 @@
 .shop-item h3 {
   margin: 0;
   font-size: 1rem;
+
 }
 
 .shop-item p {
   margin: 5px 0;
   font-size: 0.9rem;
   color: gray;
+
 }
 
 .shop-item .checkbox {
@@ -61,4 +68,6 @@ button {
   border-radius: 5px;
   cursor: pointer;
   width: 100%;
+  font-family: 'Poppins', sans-serif;
+
 }
